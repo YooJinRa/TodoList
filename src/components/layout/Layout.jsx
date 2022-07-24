@@ -1,14 +1,13 @@
-import './style.css';
+import Layoutbox from "./style.jsx";
 import Header from '../header/Header';
 import Form from '../form/Form';
 
 function Layout() {
 	return (
-		<div className="wrapLayout">
-			레이아웃페이지
+		<Layoutbox>
 			<Header />
 			<Form />
-		</div>
+		</Layoutbox>
 	)
 }
 

@@ -1,10 +1,11 @@
-import './style.css';
+import Headerbox from "./style.jsx";
 
 function Header() {
     return (
-        <header className="wrapHeader">
-            헤더 컴포넌트
-        </header>
+        <Headerbox>
+            <h1>My Todo List</h1>
+            <p>REACT JS</p>
+        </Headerbox>
     )
 }
 

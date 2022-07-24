@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import Listbox from "./style.jsx";
 import Todo from '../todo/Todo';
 
 function List({ 
@@ -28,14 +28,14 @@ function List({
 	}
 
 return (
-	<div className="boxList">
-		리스트 컴포넌트
-		<h2 className='titleList'>Working</h2>
+	<Listbox>
+		<h2 className='titleList'>Working To-dos</h2>
 		<div className='rowList'>
 			{todos.map((todo) => (
 				!todo.isdone &&
 				<Todo 
 					todo = {todo}
+					key = {todo.id}
 					onClickDelete = {() => onClickDelete(todo)} 
 					onClickComplete = {() => onClickComplete(todo)}
 					onClickCancel = {() => onClickCancel(todo)}
@@ -43,19 +43,20 @@ return (
 			))}
 		</div>
 
-		<h2 className='titleList'>Done</h2>
+		<h2 className='titleList'>Done To-dos</h2>
 		<div id='rowDone' className='rowList'>
 			{todos.map((todo) => (
 				todo.isdone &&
 				<Todo 
 					todo = {todo}
+					key = {todo.id}
 					onClickDelete = {() => onClickDelete(todo)} 
 					onClickComplete = {() => onClickComplete(todo)}
 					onClickCancel = {() => onClickCancel(todo)}
 				/>
 			))}
 		</div>
-	</div>
+	</Listbox>
 	)
 }
 
