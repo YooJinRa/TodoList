@@ -1,6 +1,7 @@
 # My Todo List
 
 ### TECH :::
+#### REACT JS, Styled-Components, Yarn
 <p>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
   <img src="https://img.shields.io/badge/Create React App-09D3AC?style=for-the-badge&logo=Create React App&logoColor=white">
