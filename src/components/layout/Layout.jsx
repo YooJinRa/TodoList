@@ -3,6 +3,8 @@ import Header from '../header/Header';
 import Form from '../form/Form';
 
 function Layout() {
+	console.log("layout ::")
+	
 	return (
 		<Layoutbox>
 			<Header />

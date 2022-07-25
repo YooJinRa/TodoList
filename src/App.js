@@ -4,6 +4,8 @@ import TodoList from './pages/TodoList';
 
 function App() {
   
+  console.log("app ::");
+  
   return (
     <div className='wrap'>
       <TodoList />

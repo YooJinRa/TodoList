@@ -1,6 +1,7 @@
 import Headerbox from "./style.jsx";
 
 function Header() {
+    console.log('header : ');
     return (
         <Headerbox>
             <h1>My Todo List</h1>

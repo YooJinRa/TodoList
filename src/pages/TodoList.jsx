@@ -2,6 +2,7 @@ import Layout from '../components/layout/Layout';
 import LogoImage from '../images/logo.png';
 
 function TodoList() {
+	console.log("todolist page ::")
 	return(
 		<div>
 				<p style={{textAlign:'center', margin:'20px 0'}}>

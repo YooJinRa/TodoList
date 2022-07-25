@@ -7,12 +7,36 @@ function Form() {
 	const [text, setText] = useState('');
 	const [todos, setTodos] = useState([
 		{
-			id: 1,
+			id: 100,
 			title: 'Study React JS!',
 			text: 'useState, props...',
 			isdone: false,
 		},
 	]);
+
+	// 삭제 버튼 구현
+	const onClickDelete = (targetTodo) => {
+		setTodos(todos.filter((todo) => todo.id !== targetTodo.id));
+	}
+
+	// 완료 버튼 구현
+	const onClickComplete = (targetTodo) => {
+		setTodos(todos.map((todo) => (
+			targetTodo.id === todo.id ?
+				(targetTodo.isdone = !targetTodo.isdone, targetTodo) : todo
+		)));
+	}
+
+	// 취소 버튼 구현
+	const onClickCancel = (targetTodo) => {
+		setTodos(todos.map((todo) => (
+			targetTodo.id === todo.id ?
+				(targetTodo.isdone = !targetTodo.isdone, targetTodo) : todo
+		)));
+	}
+
+	console.log('form :: todos : ', todos);
+
 	return (
 		<Formbox>
 			<h2>Please write your to-dos</h2>
@@ -40,8 +64,11 @@ function Form() {
 				}}>Add</button>
 			</div>
 			<List 
-				setTodos={setTodos}
-				todos={todos}
+				setTodos = {setTodos}
+				todos = {todos}
+				onClickCancel = {onClickCancel}
+				onClickComplete = {onClickComplete}
+				onClickDelete = {onClickDelete}
 			/>
 		</Formbox>
 	)
